@@ -1,4 +1,4 @@
-function run_nihba(model,options, minRatioOfGrowth)
+function [solutions, bestKO]=run_nihba(model,options, minRatioOfGrowth)
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % NIHBA: A NETWORK INTERDICTION APPROACH WITH HYBRID BENDERS ALGORITHM FOR STRAIN DESIGN
 % solve:
@@ -60,6 +60,15 @@ for i=1:length(solutions.allSet)
     koSol(end+1,:)=[deletions',cell(1,options.maxKO-length(deletions))];
 end
 
+% find best strategy in terms of lower bound production
+[~,idx]=max(values(:,2));
+tmpBestKO=solutions.allSet{idx};
+bestKO={};
+for i=1:length(tmpBestKO)
+    tmpSet=strsplit(tmpBestKO{i},'/');
+    bestKO{i}=tmpSet{1};
+end
+
 % creat a table of results
 tabnums=array2table(values,'VariableNames',{'biomass','minProd','maxProd'});
 tabstrs=cell2table(koSol, 'VariableNames',cellfun(@(x) ['ko' num2str(x)],num2cell(1:options.maxKO),'UniformOutput',false));
@@ -80,7 +89,7 @@ end
 
 %% subfunctions
 function saveResults(tabVal, filename)
-if ~exist('results', 'dir')
+if ~exist([pwd,'results'], 'dir')
     mkdir('results');
 end
 
