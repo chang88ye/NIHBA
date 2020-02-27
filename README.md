@@ -34,6 +34,9 @@ It is extremely important to retrieve unbounded rays for unbounded LP in NIHBA. 
 
 4, If you want to apply NIHBA to other genome-scale models for different products, just change target product in run_example
 
+5, If you wish to visualise the results of NIHBA as did in our paper, please feel free to reuse or modify the code I provide at 
+
+
 ## License
 
 Released under the MIT license. All included network models provided under their respective licenses.
