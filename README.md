@@ -26,9 +26,13 @@ $ git clone --depth=1 https://github.com/Chang88ye/NIHBA.git NIHBA
 
 Note: nihba_setup will help you add all the NIHBA files to matlab directory. It will also test if you have all prerequisites available for NIHBA.
 
-It is extremely important to retrieve unbounded rays for unbounded LP in NIHBA. This can be done by setting the InfUnbdInfo parameter to 1 for gurobi, and then return the unbounded ray in solveCobraLP (i.e., x=resultgurobi.unbdray in Cobratoolbox)
+It is extremely important to retrieve unbounded rays for unbounded LP in NIHBA. This can be done by setting the InfUnbdInfo parameter to 1 for gurobi, and then return the unbounded ray in solveCobraLP (i.e., x=resultgurobi.unbdray in Cobratoolbox). The following shows what should look like in the unbounded case of solveCobraLP for gurobi.
 
-3, Run a toy example that maximises succinate production from the E. coli core model
+        case 'UNBOUNDED'
+                stat = 2; % unbounded
+                x=resultgurobi.unbdray;
+
+3, Run a toy example that maximises succinate production from the E. coli core model.
 
 >> run_example
 
