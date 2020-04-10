@@ -26,13 +26,13 @@ $ git clone --depth=1 https://github.com/Chang88ye/NIHBA.git NIHBA
 
 Note: nihba_setup will help you add all the NIHBA files to matlab directory. It will also test if you have all prerequisites available for NIHBA.
 
-It is extremely important to retrieve unbounded rays for unbounded LP in NIHBA. This can be done by setting the InfUnbdInfo parameter to 1 for gurobi, and then return the unbounded ray in solveCobraLP (i.e., x=resultgurobi.unbdray in Cobratoolbox). The following shows what should look like in the unbounded case of solveCobraLP for gurobi.
+It is extremely important to retrieve unbounded rays for unbounded LP in NIHBA. This can be done by [setting the InfUnbdInfo parameter to 1 for gurobi, and then return the unbounded ray in solveCobraLP (i.e., x=resultgurobi.unbdray in Cobratoolbox)]. The following shows what should look like in the unbounded case of solveCobraLP for gurobi.
 
         case 'UNBOUNDED'
                 stat = 2; % unbounded
                 x=resultgurobi.unbdray;
 
-If you encounter that _+optimality conditions are not satisfied in solveCobraQP+_, it is likely caused by the numerical issue in the 'analyzeOptKnock'function in the cobratoolbox. In this case, you can replace it with the one provided in NIBA.
+If you encounter that [optimality conditions are not satisfied in solveCobraQP], it is likely caused by the numerical issue in the ['analyzeOptKnock'] function in the cobratoolbox. In this case, you can replace it with the one provided in NIBA.
 
 3, Run a toy example that maximises succinate production from the E. coli core model.
 
