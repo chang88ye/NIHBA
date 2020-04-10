@@ -32,7 +32,7 @@ It is extremely important to retrieve unbounded rays for unbounded LP in NIHBA. 
                 stat = 2; % unbounded
                 x=resultgurobi.unbdray;
 
-If you encounter that optimality conditions are not satisfied in solveCobraQP, it is likely caused by the numerical issue in the 'analyzeOptKnock'function in the cobratoolbox. In this case, you can replace it with the one provided in NIBA.
+If you encounter that +optimality conditions are not satisfied in solveCobraQP+, it is likely caused by the numerical issue in the 'analyzeOptKnock'function in the cobratoolbox. In this case, you can replace it with the one provided in NIBA.
 
 3, Run a toy example that maximises succinate production from the E. coli core model.
 
