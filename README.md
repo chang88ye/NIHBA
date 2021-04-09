@@ -49,4 +49,4 @@ Released under the MIT license. All included network models provided under their
 
 ## Cite Us
 
-Jiang S, Wang Y, Kaiser M, Krasnogor N.(2020) NIHBA: A network interdiction approach with Hbybrid Benders Algorithm for Metabolic Engineering. https://www.biorxiv.org/content/10.1101/752923v2.full
+Jiang S, Wang Y, Kaiser M, Krasnogor N (2020) NIHBA: A network interdiction approach for Metabolic Engineering Design, Bioinformatics, 36 (11), 3482-3492.
