@@ -32,7 +32,7 @@ substrate='EX_glc__D_e';
 % model.ub(model.ub>10000)=10000;
 orimodel=model;
 
-[model,candidate]=compressModel(orimodel,substrate,oxygenRxn,biomassRxn,targetRxn);
+[model,candidate]=nihba_prep(orimodel,substrate,oxygenRxn,biomassRxn,targetRxn);
  
 model.lb(model.lb<-100)=-100;
 model.ub(model.ub>100)=100;
