@@ -19,6 +19,9 @@ if isempty(str)
     fprintf(2,'***Current directory is not NIHBA, please change it to NIHBA.\n')
 end
 
+changeCobraSolverParams('LP', 'feasTol', 1e-9);
+changeCobraSolverParams('MILP', 'feasTol', 1e-9);
+
 % add NIHBA to matlab search path
 curPath=fileparts(str);
 addpath(curPath);
