@@ -8,7 +8,7 @@ close all;
 % model=iAF1260b;
 
 load('iML1515.mat')
-#model=iML1515;
+%model=iML1515;
 
 % load('narg_ecoli_model_pw0.mat')
 % model=modelOut;
@@ -71,7 +71,7 @@ options.bendersTime=3600*2;
 
 tmodel = changeRxnBounds(model,biomassRxn,0.1*maxGrowth,'l');
 
-[solutions, best_strategy]=run_nihba(tmodel, options);
+[solutions,~]=run_nihba(tmodel, options);
 
 
 productionEnvelope(model,solutions.koSet, 'b',targetRxn,biomassRxn,geneDelFlag,nPts);
