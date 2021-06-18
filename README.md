@@ -32,7 +32,7 @@ It is extremely important to retrieve unbounded rays for unbounded LP in NIHBA. 
                 stat = 2; % unbounded
                 x=resultgurobi.unbdray;
 
-* Genome-scale models are not well posed, so you might need to change the feasibility tolerence to avoid numerical issues. This can be done by using the following in the __getCobraSolverParams__ file:
+* Genome-scale models are not well posed, so you might need to tighten the feasibility tolerence to avoid numerical issues. This can be done by using the following in the __getCobraSolverParams__ file:
 
         valDef.feasTol = 1e-9;
 
