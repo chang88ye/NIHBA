@@ -41,7 +41,7 @@ If you encounter that [__optimality conditions are not satisfied in solveCobraQP
 4, If you want to apply NIHBA to other genome-scale models for different products, just change target product in run_example
 
 5, If you wish to visualise the results of NIHBA as done in our paper, please feel free to use or modify the code provided at 
-https://github.com/chang88ye/NIHBA-supplement
+https://github.com/chang88ye/NIHBA-supplement (data for Table 1 included)
 
 ## License
 
